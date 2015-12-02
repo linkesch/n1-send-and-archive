@@ -9,7 +9,7 @@
   "engines": {
     "nylas": ">=0.3.26-c1ce330"
   },
-  "description": "Simple plugin that adds 'Send And Archive' button to composer.",
+  "description": "Simple plugin for N1 that adds 'Send And Archive' button to composer.",
   "dependencies": {},
   "license": "MIT",
   "author": "Pavel Linkesch"

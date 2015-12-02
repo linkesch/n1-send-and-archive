@@ -1,19 +1,16 @@
 {ComponentRegistry} = require 'nylas-exports'
 {activate, deactivate} = require '../lib/main'
 
-MyMessageSidebar = require '../lib/my-message-sidebar'
-MyComposerButton = require '../lib/my-composer-button'
+SendAndArchiveButton = require '../lib/send-and-archive-button'
 
 describe "activate", ->
-  it "should register the composer button and sidebar", ->
+  it "should register the composer button", ->
     spyOn(ComponentRegistry, 'register')
     activate()
-    expect(ComponentRegistry.register).toHaveBeenCalledWith(MyComposerButton, {role: 'Composer:ActionButton'})
-    expect(ComponentRegistry.register).toHaveBeenCalledWith(MyMessageSidebar, {role: 'MessageListSidebar:ContactCard'})
+    expect(ComponentRegistry.register).toHaveBeenCalledWith(SendAndArchiveButton, {role: 'Composer:ActionButton'})
 
 describe "deactivate", ->
-  it "should unregister the composer button and sidebar", ->
+  it "should unregister the composer button", ->
     spyOn(ComponentRegistry, 'unregister')
     deactivate()
-    expect(ComponentRegistry.unregister).toHaveBeenCalledWith(MyComposerButton)
-    expect(ComponentRegistry.unregister).toHaveBeenCalledWith(MyMessageSidebar)
+    expect(ComponentRegistry.unregister).toHaveBeenCalledWith(SendAndArchiveButton)
