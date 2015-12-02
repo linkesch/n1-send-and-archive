@@ -1,0 +1,16 @@
+{
+  "name": "send-and-archive",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orthes/n1-send-and-archive.git"
+  },
+  "engines": {
+    "nylas": ">=0.3.26-c1ce330"
+  },
+  "description": "Simple plugin that adds 'Send And Archive' button to composer.",
+  "dependencies": {},
+  "license": "MIT",
+  "author": "Pavel Linkesch"
+}
