@@ -22,11 +22,11 @@ class SendAndArchiveButton extends React.Component
 
   _onClick: =>
     # Click send button
-    sendButton = document.getElementsByClassName('btn-send')[0]
+    sendButton = React.findDOMNode(this.refs.sendAndArchiveButton).parentElement.parentElement.parentElement.getElementsByClassName('btn-send')[0]
     event = new MouseEvent('click', {
-     'view': window,
-     'bubbles': true,
-     'cancelable': false
+      'view': window,
+      'bubbles': true,
+      'cancelable': false
     })
     sendButton.dispatchEvent(event)
 
